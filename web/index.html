@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stargazers Fetcher</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <h1>GitHub Stargazers Fetcher</h1>
+    <input type="text" id="repoUrl" placeholder="Enter GitHub repo (e.g., keploy/keploy)" />
+    <input type="password" id="token" placeholder="Enter your GitHub token" />
+    
+    <div class="buttons">
+      <button onclick="fetchAll()">Fetch All</button>
+      <button onclick="fetchRecent()">Fetch 24 Hours</button>
+    </div>
+
+<div class="buttons">
+      <button onclick="exportToCSV()">Export as CSV</button>
+      <button onclick="exportToExcel()">Export as Excel</button>
+    </div>
+
+    <pre id="output"></pre>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
